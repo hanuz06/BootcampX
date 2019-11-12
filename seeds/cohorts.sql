@@ -7,7 +7,7 @@ INSERT INTO cohorts (id, name, start_date, end_date) VALUES (6, 'JUL02', '2018-0
 INSERT INTO cohorts (id, name, start_date, end_date) VALUES (7, 'JUL30', '2018-07-30T07:00:00.000Z', '2018-10-05T07:00:00.000Z');
 INSERT INTO cohorts (id, name, start_date, end_date) VALUES (8, 'AUG27', '2018-08-27T07:00:00.000Z', '2018-11-02T07:00:00.000Z');
 INSERT INTO cohorts (id, name, start_date, end_date) VALUES (9, 'SEP24', '2018-09-24T07:00:00.000Z', '2018-11-30T08:00:00.000Z');
-INSERT INTO cohorts (id, name, start_date, end_date) VALUES (10, 'OCT22',   '2018-10-22T07:00:00.000Z', '2018-12-28T08:00:00.000Z');
+INSERT INTO cohorts (id, name, start_date, end_date) VALUES (10, 'OCT22', '2018-10-22T07:00:00.000Z', '2018-12-28T08:00:00.000Z');
 INSERT INTO cohorts (id, name, start_date, end_date) VALUES (11, 'NOV19', '2018-11-19T08:00:00.000Z', '2019-01-25T08:00:00.000Z');
 INSERT INTO cohorts (id, name, start_date, end_date) VALUES (12, 'DEC17', '2018-12-17T08:00:00.000Z', '2019-02-22T08:00:00.000Z');
 
