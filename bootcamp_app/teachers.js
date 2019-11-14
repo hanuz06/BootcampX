@@ -1,11 +1,15 @@
 let input = process.argv.slice(2);
-let cohortName='';
+let cohortName = '';
 
-if (input ){
-  cohortName = input[0];  
+if (input) {
+  cohortName = input[0];
 }
 
-const { Pool } = require('pg');
+const values = [`%${cohortName}%`]
+
+const {
+  Pool
+} = require('pg');
 
 const pool = new Pool({
   user: 'vagrant',
@@ -20,15 +24,11 @@ FROM teachers
 JOIN assistance_requests ON teacher_id = teachers.id
 JOIN students ON student_id = students.id
 JOIN cohorts ON cohort_id = cohorts.id
-WHERE cohorts.name LIKE '%${cohortName}%'
+WHERE cohorts.name LIKE $1
 ORDER BY teacher;
-`)
-.then(res => {
-  res.rows.forEach(user => {
-    console.log(`${user.cohort}: ${user.teacher}`);
-  })
-});
-
-
-
-
+`, values)
+  .then(res => {
+    res.rows.forEach(user => {
+      console.log(`${user.cohort}: ${user.teacher}`);
+    })
+  });
